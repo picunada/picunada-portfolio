@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@ashthornton/asscroll": "^2.0.11",
+    "@types/three": "^0.149.0",
+    "@vueuse/core": "^9.13.0",
+    "gsap": "^3.11.4",
+    "nuxt": "^3.2.3",
+    "sass": "^1.59.2",
+    "sass-loader": "^13.2.0",
+    "three": "^0.150.1"
+  }
+}
