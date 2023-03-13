@@ -86,7 +86,7 @@ export default class App {
 
     if (this.airplane.animationMixer) this.airplane.update(delta)
 
-    this.hills.update(delta * 0.4)
+    this.hills.update(delta * 0.6)
   }
 
   private resize() {

@@ -5,25 +5,35 @@
 
 <template>
   <div class="header">
-    <img id="logo-icon" src="~/assets/icon.svg" alt="picunada logo">
+    <div flex items-end>
+      <img id="logo-icon" class="mouse-md" src="~/assets/icon.svg" alt="picunada logo">
 
-    <div class="logo-text">
-      <h3>
-        Picunada
-      </h3>
-      <h3>
-        a software engineer
-      </h3>
+      <div class="logo-text mouse-md">
+        <h3 class="mouse-md">
+          Picunada
+        </h3>
+        <h3 class="mouse-md">
+          a software engineer
+        </h3>
+      </div>
+
+      <div id="tech-stack-container">
+        <ul class="tech-stack">
+          <li class="mouse-sm">Vue</li>
+          <li class="mouse-sm">Nuxt</li>
+          <li class="mouse-sm">Three.js</li>
+          <li class="mouse-sm">Python</li>
+          <li class="mouse-sm">Swift</li>
+        </ul>
+      </div>
     </div>
-
-    <div id="tech-stack-container">
-      <ul class="tech-stack">
-        <li>Vue</li>
-        <li>Nuxt</li>
-        <li>Three.js</li>
-        <li>Python</li>
-        <li>Swift</li>
-      </ul>
+    <div flex items-end justify-center gap12>
+      <NuxtLink to="/about">
+        <h3 class="mouse-sm">About</h3>
+      </NuxtLink>
+      <NuxtLink to="/contact">
+        <h3 class="mouse-sm">Contact</h3>
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -33,6 +43,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  justify-content: space-between;
   gap: 1.2rem;
   padding: 1.5rem 1rem 1.5rem 1rem;
 }
@@ -41,6 +52,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: auto;
+  height: auto;
 }
 
 #logo-icon {
