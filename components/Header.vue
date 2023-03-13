@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { useWindowSize } from '@vueuse/core';
 
+const size = useWindowSize()
 
 </script>
 
@@ -13,7 +15,7 @@
           Picunada
         </h3>
         <h3 class="mouse-md">
-          a software engineer
+          software engineer
         </h3>
       </div>
 
@@ -27,7 +29,7 @@
         </ul>
       </div>
     </div>
-    <div flex items-end justify-center gap12>
+    <div flex items-end justify-center gap3 text-4 lg:gap12>
       <NuxtLink to="/about">
         <h3 class="mouse-sm">About</h3>
       </NuxtLink>
@@ -46,6 +48,10 @@
   justify-content: space-between;
   gap: 1.2rem;
   padding: 1.5rem 1rem 1.5rem 1rem;
+
+  @media screen and (max-width: 968px) {
+    gap: 0.2rem;
+  }
 }
 
 #tech-stack-container {
@@ -54,6 +60,10 @@
   align-items: center;
   width: auto;
   height: auto;
+
+  @media screen and (max-width: 968px) {
+    display: none;
+  }
 }
 
 #logo-icon {
@@ -72,6 +82,11 @@
   gap: 3rem;
   margin: 0;
 
+  @media screen and (max-width: 968px) {
+    gap: 0.5rem;
+    font-size: 13px;
+  }
+
   li {
     color: #AFBFD6;
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
@@ -80,5 +95,9 @@
 
 .logo-text {
   font-size: 15px;
+
+  @media screen and (max-width: 968px) {
+    font-size: 13px;
+  }
 }
 </style>

@@ -37,9 +37,8 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 body.fixed-webgl {
-  #hero-element {
+  #webgl-element {
     position: fixed;
-    bottom: unset;
   }
 }
 
@@ -68,10 +67,10 @@ body.fixed-webgl {
 
   &.webgl--contact {
     transition-delay: 0.8s;
-    transform: translateX(-50vw);
+    transform: translateX(-60vw);
 
     @media screen and (max-width: 1200px) {
-      transform: translateX(-65vw);
+      transform: translateX(-70vw);
     }
 
     @media screen and (max-width: 768px) {
@@ -119,7 +118,7 @@ body.fixed-webgl {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: rgb(50 50 93 / 20%) 0 40px 20px -20px, #d216eb -80px 13px 156px -120px;
-    transition: transform 1.5s cubic-bezier(0.85, 0, 0.15, 1);
+    transition: all 2.5s cubic-bezier(0.5, 0, 0, 1);
     clip-path: polygon(-10% -10%, 110% -10%, 110% 110%, -10% 110%);
 
     @media screen and (max-width: 1200px) {
