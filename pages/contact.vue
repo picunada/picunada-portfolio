@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div>
+  <section class="page">
     <div id="contact-container">
       <div pt50>
         <h2 color-black text-4xl class="mouse-sm">Connect</h2>
@@ -17,10 +17,26 @@
             style="color: #404040">xlaystgoku@gmail.com</a></h2>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
+.page-enter-active {
+  transition: all 1.5s cubic-bezier(0.4, 0, 0, 1);
+  transition-delay: 0.5s;
+}
+
+.page-leave-active {
+  transition: all 1s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateX(10%) translateZ(0);
+  transform-origin: left center;
+}
+
 #contact-container {
   --uno: flex flex-col w-60% xl:pt40 pl40;
 
