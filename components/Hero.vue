@@ -53,7 +53,7 @@ body.fixed-webgl {
 
   &.webgl--about {
     transition-delay: 0.8s;
-    transform: translateX(60vw);
+    transform: translateX(70vw);
 
     @media screen and (max-width: 1200px) {
       transform: translateX(70vw);
