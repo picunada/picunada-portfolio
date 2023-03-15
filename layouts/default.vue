@@ -1,5 +1,5 @@
 <script setup lang="ts">
-let preloaded = ref(false);
+let preloaded = useState('loaded')
 const route = useRoute()
 
 const preloaderClasses = computed(() => {
@@ -17,16 +17,10 @@ const pageClasses = computed(() => {
 
 const backClasses = computed(() => {
   return {
-    'right': route.path === '/about',
-    'left': route.path === '/contact',
+    'left': route.path === '/about',
+    'right': route.path === '/contact',
   }
 })
-
-onMounted(() => {
-  nextTick(() => {
-    preloaded.value = true;
-  });
-});
 
 </script>
 
@@ -51,23 +45,21 @@ onMounted(() => {
       </Transition>
     </div>
 
-    <!-- <div class="moons">
-        <div class="moon" data-speed="0.3">🌑</div>
-        <div class="moon" data-speed="0.37">🌑</div>
-        <div class="moon" data-speed="0.35">🌑</div>
-        <div class="moon" data-speed="0.4">🌑</div>
-        <div class="moon" data-speed="0.2">🌑</div>
-        <div class="moon" data-speed="0.3">🌑</div>
-        <div class="moon" data-speed="0.45">🌑</div>
-      </div> -->
-
     <div id="page-wrapper" :class="pageClasses" asscroll-container>
 
       <slot asscroll></slot>
     </div>
 
+    <div id="background" :class="backClasses"></div>
+
     <div class="preloader" :class="preloaderClasses">
-      <div class="preloader__overlay" />
+      <div class="preloader__overlay">
+        <div class="loader">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
     </div>
   </main>
 </template>
@@ -75,6 +67,9 @@ onMounted(() => {
 <style lang="scss" scoped>
 .preloader__overlay {
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 0;
   left: 0;
   bottom: 0;
@@ -95,9 +90,69 @@ onMounted(() => {
   }
 }
 
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 10px;
+  animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+  height: 35px;
+  margin: 0 5px;
+  animation-delay: .25s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: .5s;
+}
+
+@keyframes scale-up4 {
+  20% {
+    background-color: #ffff;
+    transform: scaleY(1.5);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
+}
+
 #page-wrapper {
   --uno: w-screen 2xl:w-80% relative h-screen m-auto;
 }
+
+#background::before {
+  position: absolute;
+  top: 0;
+  background: linear-gradient(180deg, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(99, 48, 180));
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: -3;
+  transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &.left {
+    background: linear-gradient(300deg, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(99, 48, 180));
+  }
+
+  &.right {
+    background: linear-gradient(50deg, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(99, 48, 180));
+  }
+}
+
+
 
 .back-link {
   color: #212A36;
@@ -105,7 +160,7 @@ onMounted(() => {
   top: 40px;
   z-index: 2;
 
-  &.left {
+  &.right {
     left: 60px;
 
     @media screen and (max-width: 992px) {
@@ -115,7 +170,7 @@ onMounted(() => {
     }
   }
 
-  &.right {
+  &.left {
     right: 60px;
 
     @media screen and (max-width: 992px) {

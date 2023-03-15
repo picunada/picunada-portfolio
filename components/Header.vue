@@ -30,10 +30,10 @@ const size = useWindowSize()
       </div>
     </div>
     <div flex items-end justify-center gap3 text-4 lg:gap12>
-      <NuxtLink to="/about">
+      <NuxtLink cursor-pointer z-3 to="/about">
         <h3 class="mouse-sm">About</h3>
       </NuxtLink>
-      <NuxtLink to="/contact">
+      <NuxtLink cursor-pointer z-3 to="/contact">
         <h3 class="mouse-sm">Contact</h3>
       </NuxtLink>
     </div>

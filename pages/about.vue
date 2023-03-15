@@ -21,13 +21,13 @@ useHead({
           <img id="avatar" src="~/assets/images/linkedin_avatar.png" />
         </div>
         <div>
-          <h2 color-black text-4xl class="mouse-sm">Daniil Bezuglov</h2>
+          <h2 color-black text-4xl class="mouse-md">Daniil Bezuglov</h2>
           <h3 color-neutral text-xl font-400 class="mouse-sm">21 y.o Software Engineer</h3>
         </div>
       </div>
 
       <div pt5>
-        <h2 color-black>Career Objective</h2>
+        <h2 color-black class="mouse-md">Career Objective</h2>
         <h3 color-black font-300 pt2>
           Hey, I'am a Daniil.
           I am a problem solver who is eager to grow as a software engineer in an emerging company. I am passionate about
@@ -38,7 +38,7 @@ useHead({
         </h3>
       </div>
       <div>
-        <h2 color-black>Experience</h2>
+        <h2 color-black class="mouse-md">Experience</h2>
         <h3 color-neutral text-xl font-400 pt2 class="mouse-sm">Digital-Spirit, QA Engineer, 2020/09 - 2021/04</h3>
         <h3 color-black font-300>
           As a QA engineer at Digital-Spirit, I tested the code for the Interbank Bus System. I worked with the
@@ -70,7 +70,7 @@ useHead({
         </h3>
       </div>
       <div>
-        <h2 color-black>Skills</h2>
+        <h2 color-black class="mouse-md">Skills</h2>
         <h3 color-black font-300 pt2>
           I am a fast learner. I have experience working with a variety of programming languages and tools, including:
         </h3>

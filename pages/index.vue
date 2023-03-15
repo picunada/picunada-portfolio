@@ -10,7 +10,7 @@
           <div i-mdi:github text-3xl class="icon mouse-sm" />
         </NuxtLink>
 
-        <NuxtLink to="https://www.linkedin.com/in/daniil-bezuglov-4b1418234/">
+        <NuxtLink z-3 to="https://www.linkedin.com/in/daniil-bezuglov-4b1418234">
           <div i-mdi:linkedin text-3xl class="icon mouse-sm" />
         </NuxtLink>
 

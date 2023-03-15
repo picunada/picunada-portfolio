@@ -27,6 +27,8 @@ export default class App {
   private airplane: Airplane
   private hills: HillsPlane
 
+  public loaded: Ref<boolean> = useState('loaded', () => false)
+
   constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas
     this.renderer = new THREE.WebGLRenderer({
@@ -59,6 +61,7 @@ export default class App {
       this.airplane.setAnimations()
       this.airplane.setupModel()
       this.airplane.airplane?.children[0].position.set(0, 0, 0)
+      this.loaded.value = true
     })
 
     this.hills = new HillsPlane(this.scene)
