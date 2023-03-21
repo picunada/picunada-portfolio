@@ -143,6 +143,10 @@ const backClasses = computed(() => {
   z-index: -3;
   transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 
+
+}
+
+#background::after {
   &.left {
     background: linear-gradient(300deg, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(99, 48, 180));
   }

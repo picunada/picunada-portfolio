@@ -36,6 +36,9 @@ const size = useWindowSize()
       <NuxtLink cursor-pointer z-3 to="/contact">
         <h3 class="mouse-sm">Contact</h3>
       </NuxtLink>
+      <a href="/job-resume.pdf" download="">
+        <h3 class="mouse-sm">Resume</h3>
+      </a>
     </div>
   </div>
 </template>
