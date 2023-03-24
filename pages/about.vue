@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Hey, I\'m Picunada',
+  title: 'About',
   meta: [
     {
       name: 'description',
@@ -22,7 +22,7 @@ useHead({
         </div>
         <div>
           <h2 color-black text-4xl class="mouse-md">Daniil Bezuglov</h2>
-          <h3 color-neutral text-xl font-400 class="mouse-sm">21 y.o Software Engineer</h3>
+          <h3 color-neutral text-xl font-400 class="mouse-sm">Software Engineer</h3>
         </div>
       </div>
 

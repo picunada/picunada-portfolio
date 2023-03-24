@@ -22,6 +22,19 @@ const backClasses = computed(() => {
   }
 })
 
+useHead({
+  title: 'Hey, I\'m Picunada',
+  meta: [
+    {
+      name: 'description',
+      content: 'Newbee software engineer.'
+    }
+  ],
+  bodyAttrs: {
+    class: 'enable-scroll fixed-webgl'
+  }
+});
+
 </script>
 
 <template>

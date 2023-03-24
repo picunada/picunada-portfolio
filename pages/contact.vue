@@ -1,6 +1,16 @@
 <script setup lang="ts">
-
-
+useHead({
+  title: 'Contact',
+  meta: [
+    {
+      name: 'description',
+      content: 'Newbee software engineer.'
+    }
+  ],
+  bodyAttrs: {
+    class: 'enable-scroll fixed-webgl'
+  }
+});
 </script>
 
 <template>
